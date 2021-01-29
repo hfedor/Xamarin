@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PAIN_Xamarin.kgPage">
+    <ContentPage.Content>
+        <StackLayout Margin="10,35,10,10">
+            <Label Text="Przelicznik kilogramów na funty i odwrotnie"
+               HorizontalOptions="Center"
+               FontAttributes="Bold" 
+               Font="30"/>
+            <Editor x:Name="editor"
+                Placeholder="Liczba do przeliczenia"
+                HeightRequest="100" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="kg. -> lb."
+                    Clicked="KtoFClicked" />
+                <Button Grid.Column="1"
+                    Text="lb. -> kg."
+                    Clicked="FtoKClicked"/>
+            </Grid>
+            <Label Text="Przeliczone:"
+               HorizontalOptions="Center"
+               FontAttributes="Bold" 
+               Font="30"/>
+            <Label x:Name="resultlabel"
+               HorizontalOptions="Center"
+               FontAttributes="Bold" 
+               Font="30"/>
+            <Button Text="°C -> °F"
+                    Clicked="CFClicked" />
+            <Button Text="m -> in"
+                    Clicked="MINClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
